@@ -1,0 +1,149 @@
+/* Importação da fonte do Google Fonts (opcional, mas recomendado) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --cor-principal: #6c5ce7; /* Roxo */
+    --cor-secundaria: #a29bfe; /* Roxo Claro */
+    --cor-fundo: #f5f6fa; /* Cinza Claro */
+    --cor-texto: #2d3436; /* Preto Acinzentado */
+    --cor-alerta: #e17055; /* Laranja/Vermelho */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+/* --- Contagem Regressiva --- */
+#contagem-regressiva {
+    padding: 40px 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#cronometro {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tempo-unidade {
+    background: var(--cor-secundaria);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tempo-unidade span {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.tempo-unidade label {
+    font-size: 0.8em;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+/* --- Mensagem Final --- */
+#mensagem-final {
+    color: var(--cor-alerta);
+    font-size: 2em;
+    margin-top: 30px;
+    animation: pulsar 1.5s infinite alternate;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animação simples para a mensagem final */
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* --- Galeria --- */
+#galeria {
+    padding: 40px 20px;
+}
+
+.galeria-fotos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.foto-placeholder {
+    width: 200px;
+    height: 150px;
+    background-color: var(--cor-secundaria);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--cor-texto);
+    color: white;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    #cronometro {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .tempo-unidade {
+        min-width: 80%;
+    }
+    .tempo-unidade span {
+        font-size: 2.5em;
+    }
+}
