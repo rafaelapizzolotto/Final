@@ -94,6 +94,8 @@ header h1 {
     100% { transform: scale(1.05); }
 }
 
+/* ... Seu CSS anterior (variáveis, body, header, contagem regressiva, etc.) ... */
+
 /* --- Galeria --- */
 #galeria {
     padding: 40px 20px;
@@ -106,6 +108,41 @@ header h1 {
     flex-wrap: wrap;
     margin-top: 20px;
 }
+
+/* NOVO ESTILO: Garante que as imagens inseridas no HTML tenham um visual agradável */
+.galeria-fotos img {
+    /* Define o tamanho das fotos na galeria */
+    width: 100%; /* Ocupa 100% do seu contêiner flexível */
+    max-width: 250px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    
+    /* Estilo visual */
+    border-radius: 8px; /* Cantos arredondados */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer (se você definir um height fixo) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Transição para o hover */
+}
+
+/* Efeito de destaque ao passar o mouse */
+.galeria-fotos img:hover {
+    transform: scale(1.05);
+}
+
+/* Melhorando a aparência do parágrafo da galeria */
+#galeria p {
+    font-style: italic;
+    color: var(--cor-texto);
+    margin-bottom: 25px;
+}
+
+/* REMOVIDO: O placeholder não é mais necessário se você usar a tag <img> */
+/* .foto-placeholder {
+    ...
+} */
+
+
+/* --- Footer --- */
+/* ... Seu CSS restante (footer e media query) ... */
 
 .foto-placeholder {
     width: 200px;
